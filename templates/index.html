@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animash</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <header class="header">
+      <div class="current_cutest_holder">
+        <div>Current cutest</div>
+        <div id="cutest_score_holder">
+          Score:
+          <div id="cutest_score" class="cutest_score"></div>
+        </div>
+        <img id = "current_cutest" class="current_cutest">
+        </div>
+  	<div class="title">
+    	<h2>Animash</h2>
+    </div>
+  </header>
+
+  <main class="main">
+  	<div class=animal-wrapper>
+	    <div class="animal">
+        <div id = "info1" class="info">
+          <div id="score_1_holder"> 
+            Score:<span id="score1"> </span>
+        </div>
+        </div>
+         <div id="loader1" class="loader"></div>
+	    	<img id='img1' alt = "An image for comparison">
+        <button id = "c1" class = full>View full image</button>
+	    </div>
+     
+	    <div class="animal">
+        <div id = "info2" class="info">
+          <div id="score_2_holder">
+            Score:<span id="score2"> </span>
+          </div>
+        </div>
+	       	<img id='img2' alt = "An image for comparison">
+          <div id="loader2" class="loader"></div>
+          <button id = "c2" class = full>Full Media</button>
+	    </div>
+	</div>
+  </main>
+
+
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

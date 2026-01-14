@@ -1,0 +1,152 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  position: relative; 
+  padding: 10px 0;
+  justify-content: space-between;
+}
+
+.current_cutest{
+  width: 300;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  position:relative;
+}
+
+
+.logout {
+ margin-right: 30px;
+  top: 5px;
+  left: 5px;
+}
+
+.title {
+  text-align: center;
+}
+
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  padding-top: 20px; 
+}
+
+
+
+.animal-wrapper {
+  margin: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  user-select: text;
+  flex-wrap: wrap;
+}
+
+
+.animal {
+  width: 700px;
+  height: 700px;
+  overflow: hidden;
+  border-radius: 8px;
+  position:relative;
+}
+
+.info{
+  position:relative;
+  z-index:1000;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+.animal button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%); 
+  z-index: 99;
+} 
+
+.animal img {
+  margin-top: 20px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position:relative;
+  z-index:10
+}
+.animal img:hover{
+  transition: 0.2s;
+  transform: scale(1.01);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+.loader {
+
+  position: absolute; 
+  width: 60px;    
+  height: 60px;   
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+
+  
+  border: 4px solid #f3f3f3; 
+  border-top: 4px solid #3498db;
+  border-radius: 50%; 
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start at 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* Rotate a full 360 degrees */
+  }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1080px) {
+  .animal {
+    width: 430px;
+    height: 430px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .animal {
+    width: 300px;
+    height: 300px;
+  }
+
+  .title h2 {
+    font-size: 1.2rem;
+  }
+}
